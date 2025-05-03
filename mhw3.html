@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MangaYo!
+        </title>
+        <link rel="stylesheet" href="mhw3.css">
+        <script src="mhw3.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header">
+            <div class="left_header">
+                <div class="servizio_clienti"><p>SERVIZIO CLIENTI</p></div>
+            </div>
+            <div class="right_header">
+                <div class="login_desktop">
+                    <img id="immagine_profilo_desktop" src="login.jpg">
+                    <span id="nome_profilo_desktop">ACCEDI</span>
+                </div>
+                <div class="lista_desideri">
+                    <img src="preferiti.jpg">
+                    <span>LISTA DEI DESIDERI</span>
+                </div>
+                <div class="carrello">
+                    <img src="carrello.jpg">
+                    <span>CARRELLO</span>
+                </div>
+            </div>
+        </header>
+        <div id="cart_sidebar" class="closed">
+            <span class="cart_header">
+                <h1>CARRELLO</h1>
+            </span>
+            <button class="close_cart">X</button>
+            <div class="cart_items"></div>
+            <div id="cart_total">
+                <p>Totale: <span id="total_price">0.00€</span></p>
+            </div>
+            <div id="checkout">
+                <button class="checkout_button">Acquista ora</button>
+            </div>
+        </div>
+        <nav id="nav">
+            <div class="logo">
+                <img src="logo.svg">
+            </div>
+            <ul class="categorie">
+                <li>NOVITÀ</li>
+                <li>MANGA</li>
+                <li>GIAPPONE</li>
+                <li>FIGURE</li>
+                <li>CARD GAME</li>
+                <li>PREORDINI</li>
+            </ul>
+            <div class="search_container">
+                <button type="button" class="search">
+                    <h1>CERCA</h1>
+                     <img src="search.svg">
+                </button>
+            </div>
+            <div id="search_bar" class="hidden">
+                <input type="text" placeholder="Che cosa stai cercando?">
+                <button type="submit"><img src="search.svg"></button>
+            </div>
+        </nav>
+        <header id="mobile_header">
+            <div id="menu_container">
+                <button class="mobile_menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div id="menu_sidebar" class="closed">
+                <div class="menu_header">
+                    <button class="close_menu">X</button>
+                    <div class="logo">
+                        <img src="logo.svg">
+                    </div>
+                </div>
+                <div class="menu_content">
+                    <ul class="categorie">
+                        <li>NOVITÀ</li>
+                        <li>MANGA</li>
+                        <li>GIAPPONE</li>
+                        <li>FIGURE</li>
+                        <li>CARD GAME</li>
+                        <li>PREORDINI</li>
+                    </ul>
+                    <span class="lista_desideri"><p>LISTA DEI DESIDERI</p></span>
+                    <span class="servizio_clienti"><p>SERVIZIO CLIENTI</p></span>
+                    <div class="login_mobile">
+                        <img id="immagine_profilo_mobile" src="login.jpg">
+                        <span id="nome_profilo_mobile">ACCEDI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="logo.svg">
+            </div>
+            <div class="carrello_mobile">
+                <img src="carrello.jpg">
+            </div>
+        </header>
+        <nav id="mobile_nav">
+            <div class="mobile_search_bar">
+                <input type="text" placeholder="Che cosa stai cercando?">
+                <button type="submit"><img src="search.svg"></button>
+            </div>
+        </nav>
+        <section class="banner_container">
+            <div class="banner">
+                <img src="banner1.jpg">
+                <img src="banner2.jpg">
+                <img src="banner3.jpg">
+            </div>
+            <button class="prec">&#10094</button>
+            <button class="succ">&#10095</button>
+        </section>
+        <section class="ultime_uscite">
+            <div class="title">
+                <h1>ULTIME USCITE</h1>
+            </div>
+            <div class="container">
+                <article class="article">
+                    <div class="image_container">
+                        <img src="kagurabachi.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Kagurabachi</p>
+                    <h1>5,20 €</h1>
+                    <button class="add_to_cart" data-id="1" data-name="Kagurabachi" data-price="5.20" data-img="kagurabachi.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="one_piece.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>One Piece</p>
+                    <h1>5,00 €</h1>
+                    <button class="add_to_cart" data-id="2" data-name="One Piece" data-price="5.00" data-img="one_piece.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="blue_lock.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Blue Lock</p>
+                    <h1>5,80 €</h1>
+                    <button class="add_to_cart" data-id="3" data-name="Blue Lock" data-price="5.80" data-img="blue_lock.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="yu_degli_spettri.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Yu Degli Spettri</p>
+                    <h1>6,00 €</h1>
+                    <button class="add_to_cart" data-id="4" data-name="Yu Degli Spettri" data-price="6.00" data-img="yu_degli_spettri.jpg">Aggiungi al carrello</button>
+                </article>
+            </div>
+        </section>
+        <section class="novita_card_game">
+            <div class="title">
+                <h1>NOVITÀ CARD GAME</h1>
+            </div>
+            <div class="container">
+                <article class="article">
+                    <div class="image_container">
+                        <img src="one_piece_card_game.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>One Piece Card Game</p>
+                    <h1>144,00 €</h1>
+                    <button class="add_to_cart" data-id="5" data-name="One Piece Card Game" data-price="144.00" data-img="one_piece_card_game.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="disney_lorcana.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Disney Lorcana</p>
+                    <h1>129,90 €</h1>
+                    <button class="add_to_cart" data-id="6" data-name="Disney Lorcana" data-price="129.90" data-img="disney_lorcana.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="dragon_ball_super_card.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Dragon Ball Super</p>
+                    <h1>129,00 €</h1>
+                    <button class="add_to_cart" data-id="7" data-name="Dragon Ball Super" data-price="129.00" data-img="dragon_ball_super_card.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="yu-gi-oh.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Yu-Gi-Oh</p>
+                    <h1>79,00 €</h1>
+                    <button class="add_to_cart" data-id="8" data-name="Yu-Gi-Oh" data-price="79.00" data-img="yu-gi-oh.jpg">Aggiungi al carrello</button>
+                </article>
+            </div>
+        </section>
+        <section class="novita_preordini">
+            <div class="title">
+                <h1>NOVITÀ PREORDINI</h1>
+            </div>
+            <div class="container">
+                <article class="article">
+                    <div class="image_container">
+                        <img src="one_piece_preordine.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>One Piece Card Game</p>
+                    <h1>144,00 €</h1>
+                    <button class="add_to_cart" data-id="9" data-name="One Piece Card Game" data-price="144.00" data-img="one_piece_preordine.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="dragon_ball_preordine.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Dragon Ball</p>
+                    <h1>144,00 €</h1>
+                    <button class="add_to_cart" data-id="10" data-name="Dragon Ball" data-price="144.00" data-img="dragon_ball_preordine.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="berserk_preordine.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Berserk</p>
+                    <h1>139,00 €</h1>
+                    <button class="add_to_cart" data-id="11" data-name="Berserk" data-price="139.00" data-img="berserk_preordine.jpg">Aggiungi al carrello</button>
+                </article>
+                <article class="article">
+                    <div class="image_container">
+                        <img src="cuphead_preordine.jpg">
+                        <div class="overlay">Nuovo</div>
+                        <div class="wishlist"><button><img src="wishlist.png"></button></div>
+                    </div>
+                    <p>Cuphead: bundle</p>
+                    <h1>120,00 €</h1>
+                    <button class="add_to_cart" data-id="12" data-name="Cuphead: bundle" data-price="120.00" data-img="cuphead_preordine.jpg">Aggiungi al carrello</button>
+                </article>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="contatti">
+                <img src="logo.svg">
+                <ul>
+                    <li>Milano</li>
+                    <li>Italia</li>
+                    <li>servizioclienti@mangayo.it</li>
+                    <li>Contattaci su WhatsApp</li>
+                </ul>
+            </div>
+            <div class="prodotti">
+                <h2>PRODOTTI</h2>
+                <ul>
+                    <li>Novità</li>
+                    <li>Manga</li>
+                    <li>Giappone</li>
+                    <li>Figure</li>
+                    <li>Preordine</li>
+                    <li>Card Game</li>
+                </ul>
+            </div>
+            <div class="informazioni">
+                <h2>INFORMAZIONI</h2>
+                <ul>
+                    <li>Ambiente</li>
+                    <li>Termini e condizioni</li>
+                    <li>Spedizioni e resi</li>
+                    <li>Carta del Docente</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Policy</li>
+                    <li>Cancellazione Account</li>
+                    <li>Domande Frequenti</li>
+                    <li>Lavora con noi</li>
+                    <li>Carte Cultura</li>
+                    <li>Contattaci</li>
+                </ul>
+            </div>
+            <div class="account">
+                <h2>IL TUO ACCOUNT</h2>
+                <ul>
+                    <li>Informazioni personali</li>
+                    <li>Ordini</li>
+                    <li>Note di credito</li>
+                    <li>Indirizzi</li>
+                    <li>Buoni</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
